@@ -178,6 +178,9 @@
   .slots li { display: flex; gap: 0.7rem; align-items: flex-start; border: 2px dashed var(--line); border-radius: 0.6rem; padding: 0.6rem 0.8rem; margin-bottom: 0.5rem; min-height: 3.2rem; }
   .slots li.filled { border-style: solid; border-color: var(--gold); background: var(--cream); }
   .slots .letter { width: 2.2rem; height: 2.2rem; font-size: 1.2rem; }
+  .slots .slot-body { display: flex; flex-direction: column; }
+  .slots .slot-name { font-family: var(--heavy); line-height: 2.2rem; }
+  .slots li.filled .slot-name { line-height: 1.4; font-size: 0.95rem; color: var(--ink-soft); }
   .slots li:not(.filled) .letter { background: var(--line); color: var(--muted); }
   .order-opts .opt.used { display: none; }
   .shake { animation: shake 0.3s; }
@@ -497,10 +500,10 @@
       <p class="check-label">Activity</p>
       <p class="q">Tap the 4 sentences in OILS order. Start with O.</p>
       <ol class="slots" aria-live="polite">
-        <li><span class="letter">O</span><span class="slot-text"></span></li>
-        <li><span class="letter">I</span><span class="slot-text"></span></li>
-        <li><span class="letter">L</span><span class="slot-text"></span></li>
-        <li><span class="letter">S</span><span class="slot-text"></span></li>
+        <li><span class="letter">O</span><span class="slot-body"><span class="slot-name">Observation</span><span class="slot-text"></span></span></li>
+        <li><span class="letter">I</span><span class="slot-body"><span class="slot-name">Impact</span><span class="slot-text"></span></span></li>
+        <li><span class="letter">L</span><span class="slot-body"><span class="slot-name">Listen</span><span class="slot-text"></span></span></li>
+        <li><span class="letter">S</span><span class="slot-body"><span class="slot-name">Solution</span><span class="slot-text"></span></span></li>
       </ol>
       <div class="opts order-opts">
         <button class="opt" type="button" data-step="S">"What will help you start on time? How can I help?"</button>
